@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
+  <title>Vote</title>
+</head>
+<body>
+  <div>Yes votes: <span id="yes">{{ votes["yes"] }}</span></div>
+  <div>No votes: <span id="no">{{ votes["no"] }}</span></div>
+  <div>Maybe votes: <span id="maybe">{{ votes["maybe"] }}</span></div>
+  <div></div>
+  <div></div>
+  <hr>
+  <button data-vote="yes">Yes</button>
+  <button data-vote="no">No</button>
+  <button data-vote="maybe">Maybe</button>
+</body>
+</html>
